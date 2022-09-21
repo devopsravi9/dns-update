@@ -15,7 +15,7 @@ pipeline {
           echo "{
             "Comment": "CREATE/DELETE/UPSERT a record ",
             "Changes": [{
-              "Action": "UPSERT",
+              "Action": "CREATE",
               "ResourceRecordSet": {
                 "Name": "jenkins.devopsravi.online",
                 "Type": "A",
