@@ -22,7 +22,7 @@ pipeline {
                 "TTL": 300,
                 "ResourceRecords": [{ "Value": "IPADDRESS"}]
               }}]
-          }" | sed -e "s/IPADDRESS/${PUBLIC_IP}/" | jq
+          }" | sed -e "s/IPADDRESS/${PUBLIC_IP}/"
           aws route53 change-resource-record-sets --hosted-zone-id Z0462442QH5T6H1KPDGO --change-batch file:///tmp/record.json
         '''
         }
