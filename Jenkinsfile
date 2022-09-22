@@ -15,9 +15,9 @@ pipeline {
           {
             "Comment": "CREATE/DELETE/UPSERT a record ",
             "Changes": [{
-              "Action": "CREATE",
+              "Action": "UPSERT",
               "ResourceRecordSet": {
-                "Name": "COMPONENT.roboshop.internal",
+                "Name": "jenkins.devopsravi.online",
                 "Type": "A",
                 "TTL": 300,
                 "ResourceRecords": [{ "Value": IPADDRESS}]
