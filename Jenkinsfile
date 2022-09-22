@@ -15,7 +15,7 @@ pipeline {
           {
             "Comment": "CREATE/DELETE/UPSERT a record ",
             "Changes": [{
-              "Action": "UPSERT",
+              "Action": "CREATE",
               "ResourceRecordSet": {
                 "Name": "COMPONENT.roboshop.internal",
                 "Type": "A",
