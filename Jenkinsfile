@@ -10,7 +10,7 @@ pipeline {
     stage ( 'dns update' ) {
       steps {
         sh '''
-          PUBLIC_IP=$(aws ec2 describe-instances --instance-ids i-0d8a49ba11b61a358 | jq .Reservations[].Instances[].PublicIpAddress)
+          PUBLIC_IP=$(aws ec2 describe-instances --instance-ids i-086869893435a86d5 | jq .Reservations[].Instances[].PublicIpAddress)
           echo '
           {
             "Comment": "CREATE/DELETE/UPSERT a record ",
