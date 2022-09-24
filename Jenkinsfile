@@ -9,8 +9,9 @@ pipeline {
   stages {
     stage ( 'dns update' ) {
       steps {
-        sh 'echo hello'
+        sh "echo hello"
         sh 'PUBLIC_IP=$(aws ec2 describe-instances --instance-ids i-086869893435a86d5 | jq .Reservations[].Instances[].PublicIpAddress)'
+        sh "echo ${PUBLIC_IP}"
 //        sh
 //          """
 //            PUBLIC_IP=$(aws ec2 describe-instances --instance-ids i-086869893435a86d5 | jq .Reservations[].Instances[].PublicIpAddress)
