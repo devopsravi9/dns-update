@@ -11,7 +11,6 @@ pipeline {
       steps {
         sh """
           PUBLIC_IP=$(aws ec2 describe-instances --instance-ids i-086869893435a86d5 | jq .Reservations[].Instances[].PublicIpAddress)
-          echo $PUBLIC_IP
           echo '
           {
             "Comment": "CREATE/DELETE/UPSERT a record ",
